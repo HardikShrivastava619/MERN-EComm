@@ -1,0 +1,283 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main{
+  min-height: 34rem;
+}
+
+
+.footer-main-container{
+height: 8rem;
+padding-top: 30px;
+}
+
+
+.header-container{
+  box-shadow: 0px 2px 25px  grey;
+}
+
+
+.header-Link :hover{
+  text-decoration: underline;
+}
+
+
+.footer-link a{
+  padding: 10px;
+text-decoration: none;
+}
+
+.pnfh1{
+  font-size: 8rem;
+}
+
+.pnfp{
+  font-size: 2rem;
+}
+
+.pnfL{
+color:black;
+border: 1px solid grey;
+padding: 15px;
+
+}
+
+.footer-link a:hover{
+color: blue; 
+
+}
+
+.contact-img{
+  width:40%;
+  height: 20%;
+  margin: 4rem;
+  display: inline;
+}
+
+
+.privacy-img{
+  width: 45%;
+margin: 6%;
+}
+
+.main-contactdiv{
+display: flex;
+}
+
+
+.contactUS-heading{
+  height: 3.5rem;
+  border: 1px solid black;
+  margin-top: 5rem;
+width: 24rem;
+text-align: center;
+background-color: black;  
+color: white;
+}
+
+
+
+.register-container{
+  display: flex;
+justify-content: center;
+align-items: center;
+height: 34rem;
+background-color: #ffdee9;
+background-image: linear-gradient(0deg, #ffdee9 30% , rgb(153, 255, 0) 70%);  
+}
+
+
+.update-container{
+  display: flex;
+  margin-left : 2rem ;
+  width: 100%;
+justify-content: center;
+align-items: center;
+height: 34rem;
+background-color: #ffdee9;
+background-image: linear-gradient(0deg, #def6ff 40% , rgb(0, 174, 255) 70%);  
+}
+
+
+
+
+.register-form{
+  width: 21rem;
+  height: 28rem;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: 0px 2px 8px  black;
+  background-color: white;
+}
+
+
+
+
+
+
+.register-form input{
+  
+  margin-left: 3rem;
+  height: 40px;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+.register-form-heading{
+
+  font-size: 2rem ;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  
+  font-family: "Playfair Display" , serif;
+}
+
+.register-form button{
+  font-size: 17px;
+  font-family: "Playfair Display" , serif;  
+border: 1px solid black;
+border-radius: 0;
+background-color: black;
+color: white;
+width: 250px;
+}
+
+.Login-container{
+  display: flex;
+justify-content: center;
+align-items: center;
+height: 34rem;
+background-color: #ffdee9;
+background-image: linear-gradient(0deg, #ffdee9 40% , rgba(106, 246, 246, 0.726) 70%);  
+}
+
+.Login-form-heading{
+  
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display" , serif;
+}
+
+
+.Login-form{
+  width: 20rem;
+  height: 18rem;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: 0px 2px 8px  black;
+background-color: white;
+}
+
+.Login-form input{
+  margin-left: 3rem;
+  height: 40px;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+
+
+.Login-form button{
+  font-size: 17px;
+  font-family: "Playfair Display" , serif;
+  margin-top: 8px;
+border: 1px solid black;
+border-radius: 0;
+background-color: black;
+color: white;
+width: 250px;
+}
+
+.forgetpassword{
+  font-size: 16px;
+  
+}
+
+.forgetpassword:hover{
+  color: rgb(89, 89, 243);
+  
+} 
+
+.ForgetPassword-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34rem;
+  background-color: #ffdee9;
+  background-image: linear-gradient(15deg, #d4de18 40% ,rgb(201, 138, 247) 70%);  
+  
+}
+
+.ForgetPassword-container form{
+  border: none;
+  background-color: white;
+  width: 20rem;
+  height: 21rem;
+  box-shadow: 0px 2px 8px  black;
+  text-align: center;
+}
+
+.ForgetPassword-container input{
+
+  margin-left: 3rem;
+  height: 40px;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+.ForgetPassword-container button{ font-size: 17px;
+  font-family: "Playfair Display" , serif;
+  margin-top: 8px;
+border: 1px solid black;
+border-radius: 0;
+background-color: black;
+color: white;
+width: 250px;
+}
+
+.select-header{
+border: none;
+background-color: gold;
+
+}
+
+.admin-details{
+  border: 2px solid ;
+    margin-left: 1rem;
+padding: 1rem;
+  }
+
+  .admin-options:hover{
+   background-color: rgb(0, 140, 255); 
+   color: aliceblue;
+  }
+
+  .imageUploader{
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+
+  .products-Link{
+    text-decoration: none;
+    margin: 1rem;
+  }
+
+
+
+  .product-details-container{
+    border-bottom:1px solid silver;
+    
+  }
