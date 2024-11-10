@@ -11,7 +11,7 @@ const params = useParams()
 
 async function getUser() {
     try {
-        const res = await fetch (`http://localhost:8080/get-User/${params.id}`)
+        const res = await fetch (`https://onestmern-ecommerce-8.onrender.com/get-User/${params.id}`)
         const data = await res.json()   
         
         setUser(data?.user)
@@ -25,7 +25,7 @@ async function getUser() {
 
 const getOrders = async ()=>{
     try {
-    const res =  await fetch(`http://localhost:8080/orders/${params.id}` , {
+    const res =  await fetch(`https://onestmern-ecommerce-8.onrender.com/orders/${params.id}` , {
     })
     const data = await res.json()
     
@@ -109,7 +109,7 @@ return (<div className="d-flex"   >
                         <div className="row mb-2 card flex-row" key={p._id}>
                             <div className="col-md-4">
                                 <img 
-                                    src={`http://localhost:8080/product-photo/${p._id}`}
+                                    src={`https://onestmern-ecommerce-8.onrender.com/product-photo/${p._id}`}
                                     className="card-img-top"
                                     style={{ maxHeight: "12rem", maxWidth: "10rem", borderBottom: "0.2px solid grey" }}
                                     alt={p.name}

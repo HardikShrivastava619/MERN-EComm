@@ -42,7 +42,7 @@ async function handleCreate(e) {
  productData.append("photo" , photo)
  productData.append("category" , category)
  
- const res = await   fetch("http://localhost:8080/create-product" , {
+ const res = await   fetch("https://onestmern-ecommerce-8.onrender.com/create-product" , {
    method:"POST",
    headers:{
      "Authorization": `Bearer ${token}`
@@ -70,7 +70,7 @@ async function handleCreate(e) {
   const getAllCategory = async ()=>{
 
     try {
-      const response = await  fetch("http://localhost:8080/get-category")
+      const response = await  fetch("https://onestmern-ecommerce-8.onrender.com/get-category")
       const data =  await response.json()
     
     if (data?.success) {
