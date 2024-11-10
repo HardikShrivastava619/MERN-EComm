@@ -8,7 +8,7 @@ const logindata = useSelector(s=>s.loginData)
 
 const getOrders = async ()=>{
   try {
-  const res =  await fetch(`https://onestmern-ecommerce-8.onrender.com/orders` , {
+  const res =  await fetch(`https://onestmern-ecommerce-10.onrender.com/orders` , {
     headers:{
       "Authorization" : `Bearer ${logindata.token}`
     }
@@ -72,7 +72,7 @@ const getOrders = async ()=>{
                         <div className="row mb-2 card flex-row" key={p._id}>
                             <div className="col-md-4">
                                 <img 
-                                    src={`https://onestmern-ecommerce-8.onrender.com/product-photo/${p._id}`}
+                                    src={`https://onestmern-ecommerce-10.onrender.com/product-photo/${p._id}`}
                                     className="card-img-top"
                                     style={{ maxHeight: "12rem", maxWidth: "10rem", borderBottom: "0.2px solid grey" }}
                                     alt={p.name}

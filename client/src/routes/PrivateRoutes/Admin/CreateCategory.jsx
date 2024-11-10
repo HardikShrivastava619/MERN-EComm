@@ -26,7 +26,7 @@ async function handleSubmit (e) {
   try {
     
   
-    const response = await fetch("https://onestmern-ecommerce-8.onrender.com/create-category", {
+    const response = await fetch("https://onestmern-ecommerce-10.onrender.com/create-category", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ toast.error("something went wrong in input form")
 const getAllCategory = async ()=>{
 
 try {
-  const response = await  fetch("https://onestmern-ecommerce-8.onrender.com/get-category")
+  const response = await  fetch("https://onestmern-ecommerce-10.onrender.com/get-category")
   const data =  await response.json()
 
 if (data?.success) {
@@ -79,7 +79,7 @@ async function handleUpdate(e) {
   e.preventDefault()
   try {
 
-    const res = await fetch(`https://onestmern-ecommerce-8.onrender.com/update-category/${selected}`  , {
+    const res = await fetch(`https://onestmern-ecommerce-10.onrender.com/update-category/${selected}`  , {
       method:"PUT",
       headers:{
         "Content-Type" : "application/json",
@@ -114,7 +114,7 @@ async function handleDelete(pId) {
   
   try {
 
-    const res = await fetch(`https://onestmern-ecommerce-8.onrender.com/delete-category/${pId}`  , {
+    const res = await fetch(`https://onestmern-ecommerce-10.onrender.com/delete-category/${pId}`  , {
       method:"DELETE",
       headers:{"Authorization": `Bearer ${token}`
       },

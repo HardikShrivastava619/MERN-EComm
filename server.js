@@ -14,7 +14,7 @@ const app = express()
 const _dirname = path.resolve() //for deployment
 
 const corsOptions = {
-    origin:"https://onestmern-ecommerce-8.onrender.com",
+    origin:"https://onestmern-ecommerce-10.onrender.com",
     methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
     credentials:true,
 }
