@@ -13,7 +13,7 @@ const AdminOrder = () => {
     
     const getOrders = async ()=>{
       try {
-      const res =  await fetch(`https://onestmern-ecommerce-10.onrender.com/orders` , {
+      const res =  await fetch(`https://onestmern-ecommerce-11.onrender.com/orders` , {
         headers:{
           "Authorization" : `Bearer ${logindata.token}`
         }
@@ -34,7 +34,7 @@ const AdminOrder = () => {
 
 const handleChange = async (orderId , v)=>{
     try{
-        const res = await fetch(`https://onestmern-ecommerce-10.onrender.com/orders-staus/${orderId}` , {
+        const res = await fetch(`https://onestmern-ecommerce-11.onrender.com/orders-staus/${orderId}` , {
 method:"PUT",
 headers:{
     "Content-Type": "application/json",
@@ -89,7 +89,7 @@ return (
                         <div className="row mb-2 card flex-row" key={p._id}>
                             <div className="col-md-4">
                                 <img 
-                                    src={`https://onestmern-ecommerce-10.onrender.com/product-photo/${p._id}`}
+                                    src={`https://onestmern-ecommerce-11.onrender.com/product-photo/${p._id}`}
                                     className="card-img-top"
                                     style={{ maxHeight: "12rem", maxWidth: "10rem", borderBottom: "0.2px solid grey" }}
                                     alt={p.name}

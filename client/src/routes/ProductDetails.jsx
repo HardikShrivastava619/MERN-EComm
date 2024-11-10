@@ -60,7 +60,7 @@ if (params?.slug) getProduct()
 
 const getProduct = async () => {
     try {
-        const res = await fetch (`https://onestmern-ecommerce-10.onrender.com/get-product/${params.slug}`)
+        const res = await fetch (`https://onestmern-ecommerce-11.onrender.com/get-product/${params.slug}`)
         const data = await res.json()   
 
         
@@ -76,7 +76,7 @@ const getProduct = async () => {
 
 const getSimilarProduct =async (pid,cid)=>{
   try {
-    const res = await fetch(`https://onestmern-ecommerce-10.onrender.com/related-product/${pid}/${cid}`)
+    const res = await fetch(`https://onestmern-ecommerce-11.onrender.com/related-product/${pid}/${cid}`)
  const data = await res.json()
  setRelatedProducts(data?.products)
  
@@ -92,7 +92,7 @@ const getSimilarProduct =async (pid,cid)=>{
 <div style={{width:'91rem'}} >
 <div className="row mt-2  product-details-container "  >     
 <div className="col-md-5 mb-2 "   > 
-    <img  src={`https://onestmern-ecommerce-10.onrender.com/product-photo/${product._id}`}      style={{height:"27rem" , width:"32rem " , marginLeft:"5rem"  }}   className="card" alt={product.name} />
+    <img  src={`https://onestmern-ecommerce-11.onrender.com/product-photo/${product._id}`}      style={{height:"27rem" , width:"32rem " , marginLeft:"5rem"  }}   className="card" alt={product.name} />
     
       </div> 
      <div className="col-md-5 "   style={{margin:"2rem"}}  > 
@@ -109,7 +109,7 @@ const getSimilarProduct =async (pid,cid)=>{
 {relatedProducts.length < 1 ?  <h4  className="text-center" > No Similar Products Found  </h4>  :  <div className='d-flex' style={{maxWidth:"72rem",  paddingLeft:"5rem" ,  flexWrap:"wrap",}}  >
 {relatedProducts.map((p)=>  <div  className='card'  style={{width:"17rem" , margin:'0.5rem'  }}  key={p._id}     >  
     
-    <img    src={`https://onestmern-ecommerce-10.onrender.com/product-photo/${p._id}`}     className='card-img-top'  style={{height:"16rem" , borderBottom:"0.2px solid grey  " }}  alt={p.name} />
+    <img    src={`https://onestmern-ecommerce-11.onrender.com/product-photo/${p._id}`}     className='card-img-top'  style={{height:"16rem" , borderBottom:"0.2px solid grey  " }}  alt={p.name} />
 
  
    <div className='card-body'  > 

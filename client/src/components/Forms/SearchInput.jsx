@@ -12,7 +12,7 @@ const dispatch = useDispatch()
 const handleSubmit = async(e)=>{
     e.preventDefault()
      try {
-        const res =  await fetch(`https://onestmern-ecommerce-10.onrender.com/search/${searchData.keyword}`)
+        const res =  await fetch(`https://onestmern-ecommerce-11.onrender.com/search/${searchData.keyword}`)
         const data = await res.json()
               
               

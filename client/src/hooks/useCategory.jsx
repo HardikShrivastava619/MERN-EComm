@@ -9,7 +9,7 @@ export default function useCategory(){
 
 const getCategories = async () =>{
     try {
-        const res = await fetch (`https://onestmern-ecommerce-10.onrender.com/get-category`)
+        const res = await fetch (`https://onestmern-ecommerce-11.onrender.com/get-category`)
  const data= await res.json()
  setCategories(data?.category)
  

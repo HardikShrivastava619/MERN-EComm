@@ -31,7 +31,7 @@ const answer = answerref.current.value
 
 
 try {
-  let response = await fetch("https://onestmern-ecommerce-10.onrender.com/register", {
+  let response = await fetch("https://onestmern-ecommerce-11.onrender.com/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

@@ -47,7 +47,7 @@ const token = logindata.token
       productData.append("category", categoryID)
   
       
-      const res = await fetch(`https://onestmern-ecommerce-10.onrender.com/update-product/${id}`, {
+      const res = await fetch(`https://onestmern-ecommerce-11.onrender.com/update-product/${id}`, {
         method: "PUT",
         headers: {    
           "Authorization": `Bearer ${token}`
@@ -80,7 +80,7 @@ const token = logindata.token
     if (!ans) {
       return
     }
-    const res = await fetch(`https://onestmern-ecommerce-10.onrender.com/delete-product/${id}` ,  {
+    const res = await fetch(`https://onestmern-ecommerce-11.onrender.com/delete-product/${id}` ,  {
   method:'DELETE',
 })
 const data = await res.json()
@@ -108,7 +108,7 @@ navigate("/dashboard/admin/products")
 const getSingleProduct = async(req,res)=>{
   try {
     
-const res =  await fetch(`https://onestmern-ecommerce-10.onrender.com/get-product/${params.slug}`)
+const res =  await fetch(`https://onestmern-ecommerce-11.onrender.com/get-product/${params.slug}`)
 
 const data =  await res.json()
 
@@ -175,7 +175,7 @@ getSingleProduct()
 
 (<div className="text-center" > 
 
-<img   src={`https://onestmern-ecommerce-10.onrender.com/product-photo/${id}`}   alt="error_in_Loading "  height="200" className="img img-responsive"   />    </div>)
+<img   src={`https://onestmern-ecommerce-11.onrender.com/product-photo/${id}`}   alt="error_in_Loading "  height="200" className="img img-responsive"   />    </div>)
 
 
 }
