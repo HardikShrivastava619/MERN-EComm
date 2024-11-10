@@ -40,10 +40,9 @@ const CartPage = () => {
                 },
                 body: JSON.stringify({ nonce, cartData })
             })
-            console.log(res);
             
             const data = await res.json()
-            console.log(data)
+
             setLoading(false);
             localStorage.removeItem("Ecommerce-Web-Cart-Product");
             dispatch(CartSliceAction.cartItem());
@@ -54,6 +53,7 @@ const CartPage = () => {
             setLoading(false);
         }
     };
+
 
     // delete Product
     function removeCartItem(p) {
@@ -90,7 +90,7 @@ const CartPage = () => {
                         {`Hello ${loginData.token && loginData.user.name}`}
                     </h1>
                     <h4 className="text-center">
-                        {cartData.length > 1 
+                        {cartData.length > 0 
                             ? `You Have ${cartData.length} items in your cart ${loginData?.token ? "" : "please login to checkout"}`
                             : "Your Cart is Empty"}
                     </h4>

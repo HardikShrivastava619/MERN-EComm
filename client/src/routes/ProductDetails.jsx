@@ -14,11 +14,9 @@ const pidArray = []
 
 const dispatch = useDispatch()
 
-console.log(pid);
 
 
 const elm = pid.includes(product._id)
-console.log(elm)
 
 
 

@@ -13,7 +13,7 @@ const getProductsByCat = async ()=>{
     try {
         const res  = await fetch(`http://localhost:8080/product-category/${params.slug}`)
         const data = await res.json()
-        console.log(data);
+      
                   
         setProducts(data?.products)
 setCategory(data?.category)

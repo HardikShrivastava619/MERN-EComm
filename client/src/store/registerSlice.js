@@ -8,7 +8,6 @@ const registerSlice = createSlice({
     
         reducers:{
   register:(state,action)=>{
-    console.log(action.payload);
     
     state.push(action.payload.updatedUser)
 

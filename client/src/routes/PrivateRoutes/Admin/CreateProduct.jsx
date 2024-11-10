@@ -23,7 +23,6 @@ const navigate = useNavigate()
   
 const logindata = useSelector(s=>s.loginData)
 const token = logindata.token
-console.log(category)
 
 
     

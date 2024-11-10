@@ -19,7 +19,6 @@ const AdminOrder = () => {
         }
       })
       const data = await res.json()
-      console.log(data)
       setOrders(data)
     } catch (error) {
       console.log(error);
@@ -44,7 +43,7 @@ headers:{
 body: JSON.stringify({status:v})
         })
         const data = await res.json()        
-        console.log(data)
+      
         }catch (error) {
         console.log(error)
     }

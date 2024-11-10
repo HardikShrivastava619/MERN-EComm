@@ -7,11 +7,9 @@ import { loginSliceAction } from "../../store/loginSlice"
 const Profile = () => {
  
   const registerData = useSelector(s=>s.registerdata)
-  console.log(registerData)
   
 
    const loginData = useSelector(s=>s.loginData)
- console.log(loginData)
  
  
 const dispatch = useDispatch()
@@ -45,7 +43,7 @@ try {
     })
 
   let data = await response.json();
-  console.log(data)
+ 
   dispatch(loginSliceAction.updateUser(data))
       
   } catch (error) {

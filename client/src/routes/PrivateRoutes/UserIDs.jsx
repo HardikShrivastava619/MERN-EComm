@@ -35,7 +35,6 @@ const getOrders = async ()=>{
   }}
   
   
-  console.log(orders);
   
     
   

@@ -11,16 +11,16 @@ import { toast } from "react-toastify"
 
 
 function Home() { 
- let image =  [   <img  src="../../public/images/Wallpaperimg/diwalidisc.jpeg"/>,<img  src="../../public/images/Wallpaperimg/wal8.jpeg"/>,<img  src="../../public/images/Wallpaperimg/wal2.jpeg"/>,<img  src="../../public/images/Wallpaperimg/sale.jpeg"/>  ,<img  src="../../public/images/Wallpaperimg/wal2.jpeg"/>,<img  src="../../public/images/Wallpaperimg/wal4.jpeg"/>, <img  src="../../public/images/Wallpaperimg/c.jpg"/>,<img  src="../../public/images/Wallpaperimg/Privacy-Policy.jpg"/>  ] 
+ let image =  [   <img  src="/images/diwalidisc.jpeg"/>,<img  src="/images/wal8.jpeg"/>,<img  src="/images/wal2.jpeg"/>,<img  src="/images/sale.jpeg"/>  ,<img  src="/images//wal2.jpeg"/>,<img  src="/images/wal4.jpeg"/>, <img  src="/images/c.jpg"/>  ] 
  const [product,setProduct]  =  useState([])
  const [categories,setCategories]  =  useState([])
  const [checked,setChecked] = useState([])
  const [radio,setRadio] = useState([])
-const [total , setTotal] = useState(0)
-const [page , setPage] = useState(1)
-const [loading , setLoading] = useState(1)
-const [time , setTime] = useState(0)
-const [pid,setpid] = useState( JSON .parse(localStorage.getItem('CartBtn'))  || []  )
+ const [total , setTotal] = useState(0)
+ const [page , setPage] = useState(1)
+ const [loading , setLoading] = useState(1)
+ const [time , setTime] = useState(0)
+ const [pid,setpid] = useState( JSON .parse(localStorage.getItem('CartBtn'))  || []  )
 
 const navigate = useNavigate()
 const dispatch = useDispatch()
@@ -63,7 +63,7 @@ return setpid(up)
 ///////////////
 
 useEffect(()=>{
-  if (time < 7) {
+  if (time < 6){
   let hj = setInterval(() => {
       setTime(time+1)
     }, 3000);

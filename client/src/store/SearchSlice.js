@@ -8,7 +8,6 @@ const searchSlice = createSlice({
                 },
     reducers:{
 searchedkeyword : (state , action )=>{
-  console.log(action.payload)
   
 state.keyword = action.payload
 return localStorage.setItem("searchkeyword" , JSON.stringify(state.keyword) )
@@ -16,7 +15,6 @@ return localStorage.setItem("searchkeyword" , JSON.stringify(state.keyword) )
 },
 
   searchedResults : (state,action)=>{
-    console.log(action.payload)
     state.results = action.payload
 return    localStorage.setItem("searchresults" , JSON.stringify(state.results) )
   }

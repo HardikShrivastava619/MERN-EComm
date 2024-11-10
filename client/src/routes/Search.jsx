@@ -47,9 +47,6 @@ const handleAddToCart = (p)=>{
   return setpid(up)
   }
 
-
-  console.log(pid);
-  
   
 
   return (

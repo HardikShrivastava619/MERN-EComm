@@ -25,7 +25,6 @@ async function handleSubmit (e) {
   
   try {
     
-    console.log(name)
   
     const response = await fetch("http://localhost:8080/create-category", {
       method: "POST",
@@ -37,7 +36,6 @@ async function handleSubmit (e) {
     });
 
     let data = await response.json()
-    console.log(data);
     
     
 if (data?.success) {
@@ -91,7 +89,7 @@ async function handleUpdate(e) {
           })
       
          const data = await  res.json()
-      console.log(data)
+     
       if (data.success) {
         toast.success(data.message)
         setselected(null)
