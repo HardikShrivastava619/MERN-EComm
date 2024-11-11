@@ -16,7 +16,7 @@ const dispatch = useDispatch()
 useEffect(()=>{
 
 async function logindatacheck() {
-  const res = await fetch("https://onestmern-ecommerce-11.onrender.com/user-auth", {
+  const res = await fetch("https://onestmern-ecommerce-12.onrender.com/user-auth", {
     headers:{
       "Authorization": logindata?.token
     }
