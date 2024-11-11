@@ -8,13 +8,12 @@ import productRoutes from './routes/productRoutes.js'
 import path from 'path'
 //config env
 dotenv.config()
-
 const app = express()
 
 const _dirname = path.resolve() //for deployment
 
 const corsOptions = {
-    origin: ["http://localhost:5173", "https://onestmern-ecommerce-12.onrender.com"],
+    origin:  "https://onestmern-ecommerce-12.onrender.com",
     methods: "GET,POST,PUT,DELETE,PATCH,HEAD",
     credentials: true,
 };
