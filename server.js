@@ -14,12 +14,11 @@ const app = express()
 const _dirname = path.resolve() //for deployment
 
 const corsOptions = {
-    origin:"https://onestmern-ecommerce-12.onrender.com",
-    methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
-    credentials:true,
-}
-
-app.use(cors(corsOptions))
+    origin: ["http://localhost:5173", "https://onestmern-ecommerce-12.onrender.com"],
+    methods: "GET,POST,PUT,DELETE,PATCH,HEAD",
+    credentials: true,
+};
+app.use(cors(corsOptions));
 
 //middleware
 app.use(express.json())
@@ -32,10 +31,12 @@ app.use(categoryRoutes)
 app.use(productRoutes)
 
 
-app.use(express.static(path.join(_dirname , "/client/dist")))
- app.get("*" , (_,res)=>{
-    res.sendFile(path.resolve(_dirname , "client" , "dist" , "index.html" ))
- } )
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(_dirname, "/client/dist")));
+    app.get("*", (_, res) => {
+        res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"));
+    });
+}
 
 
 
@@ -46,5 +47,10 @@ app.get("/",  (req,res)=>{
  const PORT = process.env.PORT
 
 
-app.listen(PORT,()=>{
-    console.log("server is started at "   , {PORT} )})
+ app.listen(PORT, (err) => {
+    if (err) {
+        console.error("Server failed to start:", err);
+    } else {
+        console.log(`Server is started on port ${PORT}`);
+    }
+});

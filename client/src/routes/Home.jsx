@@ -101,6 +101,7 @@ const getAllCategory = async ()=>{
   try {
     const response = await  fetch("https://onestmern-ecommerce-12.onrender.com/get-category")
     const data =  await response.json()
+  console.log(data)
   
   if (data?.success) {
     setCategories(data?.category)
@@ -129,6 +130,7 @@ const getAllProducts = async ()=>{
     setLoading(true)
     const res =  await fetch (`https://onestmern-ecommerce-12.onrender.com/product-list/${page}`)
     const data = await res.json()    
+
 
 
   
