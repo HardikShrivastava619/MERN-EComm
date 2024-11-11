@@ -5,16 +5,15 @@ import cors from 'cors'
 import authRoutes from './routes/authRoute.js'
 import categoryRoutes from './routes/CategoryRoutes.js'
 import productRoutes from './routes/productRoutes.js'
-import path from 'path'
 //config env
 dotenv.config()
 
 const app = express()
 
-const _dirname = path.resolve() //for deployment
+
 
 const corsOptions = {
-    origin:"https://onestmern-ecommerce-12.onrender.com",
+    origin:"http://localhost:5173",
     methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
     credentials:true,
 }
@@ -32,10 +31,8 @@ app.use(categoryRoutes)
 app.use(productRoutes)
 
 
-app.use(express.static(path.join(_dirname , "/client/dist")))
- app.get("*" , (_,res)=>{
-    res.sendFile(path.resolve(_dirname , "client" , "dist" , "index.html" ))
- } )
+
+
 
 
 

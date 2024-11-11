@@ -8,7 +8,7 @@ const [product,setProducts] = useState([])
 
  async function getAllProducts() {
   try {
-const res = await fetch("https://onestmern-ecommerce-12.onrender.com/get-product")
+const res = await fetch("http://localhost:8080/get-product")
 const data = await res.json()
 setProducts(data?.products)
 
@@ -43,7 +43,7 @@ return (<>
     {product.map((p)=>    <Link to={`/dashboard/admin/product/${p.slug}`  } className="products-Link">  
   <div  className='card'  style={{width:"18rem" }}  key={p._id} >  
       
-      <img    src={`https://onestmern-ecommerce-12.onrender.com/product-photo/${p._id}`}     className='card-img-top'  style={{maxHeight:"16rem" , borderBottom:"0.2px solid grey  " }}  alt={p.name} />
+      <img    src={`http://localhost:8080/product-photo/${p._id}`}     className='card-img-top'  style={{maxHeight:"16rem" , borderBottom:"0.2px solid grey  " }}  alt={p.name} />
 
    
    <div className='card-body'  > <h5 className='card-title' >

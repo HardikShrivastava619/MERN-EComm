@@ -17,7 +17,7 @@ const token = logindata.token
 useEffect(()=>{
 
 async function logindatacheck() {
-  const res = await fetch("https://onestmern-ecommerce-12.onrender.com/admin-auth", {
+  const res = await fetch("http://localhost:8080/admin-auth", {
     headers:{
       "Authorization":   `Bearer ${token}`
     }

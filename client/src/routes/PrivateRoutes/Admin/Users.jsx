@@ -10,7 +10,7 @@ const Users = () => {
 
 const gettingUsers = async()=>{
   try {
-    const res = await fetch (`https://onestmern-ecommerce-12.onrender.com/allUsers`) 
+    const res = await fetch (`http://localhost:8080/allUsers`) 
   const data =   await res.json()
 
 setUsers(data?.allUsers)

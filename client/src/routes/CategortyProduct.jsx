@@ -11,7 +11,7 @@ const [category , setCategory] = useState([])
 
 const getProductsByCat = async ()=>{
     try {
-        const res  = await fetch(`https://onestmern-ecommerce-12.onrender.com/product-category/${params.slug}`)
+        const res  = await fetch(`http://localhost:8080/product-category/${params.slug}`)
         const data = await res.json()
       
                   
@@ -39,7 +39,7 @@ if (params?.slug) getProductsByCat()
 <div className='d-flex' style={{maxWidth:"72rem",  paddingLeft:"5rem" ,  flexWrap:"wrap",}}  >
 {products.map((p)=>  <div  className='card'  style={{width:"17rem" , margin:'0.5rem'  }}  key={p._id}     >  
     
-    <img    src={`https://onestmern-ecommerce-12.onrender.com/product-photo/${p._id}`}     className='card-img-top'  style={{maxHeight:"16rem" , borderBottom:"0.2px solid grey  " }}  alt={p.name} />
+    <img    src={`http://localhost:8080/product-photo/${p._id}`}     className='card-img-top'  style={{maxHeight:"16rem" , borderBottom:"0.2px solid grey  " }}  alt={p.name} />
 
  
  <div className='card-body'  > 

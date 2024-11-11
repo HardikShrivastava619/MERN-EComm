@@ -33,7 +33,7 @@ const address = addressref.current.value
 
 
 try {
-  let response = await fetch("https://onestmern-ecommerce-12.onrender.com/profile", {
+  let response = await fetch("http://localhost:8080/profile", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
