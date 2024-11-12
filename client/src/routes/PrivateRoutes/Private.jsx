@@ -16,7 +16,7 @@ const dispatch = useDispatch()
 useEffect(()=>{
 
 async function logindatacheck() {
-  const res = await fetch("http://localhost:8080/user-auth", {
+  const res = await fetch("https://mern-ecomm-62pn.onrender.com/user-auth", {
     headers:{
       "Authorization": logindata?.token
     }

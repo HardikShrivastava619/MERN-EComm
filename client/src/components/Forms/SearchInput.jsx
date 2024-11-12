@@ -12,7 +12,7 @@ const dispatch = useDispatch()
 const handleSubmit = async(e)=>{
     e.preventDefault()
      try {
-        const res =  await fetch(`http://localhost:8080/search/${searchData.keyword}`)
+        const res =  await fetch(`https://mern-ecomm-62pn.onrender.com/search/${searchData.keyword}`)
         const data = await res.json()
               
               

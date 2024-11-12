@@ -83,7 +83,7 @@ useEffect(()=>{
 const getTotal = async ()=>{
   try {
     
-    const res = await fetch("http://localhost:8080/product-count")
+    const res = await fetch("https://mern-ecomm-62pn.onrender.com/product-count")
     const data = await res.json()
     setTotal(data?.total)
      } catch (error) { 
@@ -99,7 +99,7 @@ const getTotal = async ()=>{
 const getAllCategory = async ()=>{
 
   try {
-    const response = await  fetch("http://localhost:8080/get-category")
+    const response = await  fetch("https://mern-ecomm-62pn.onrender.com/get-category")
     const data =  await response.json()
   console.log(data)
   
@@ -128,7 +128,7 @@ const getAllCategory = async ()=>{
 const getAllProducts = async ()=>{
   try {
     setLoading(true)
-    const res =  await fetch (`http://localhost:8080/product-list/${page}`)
+    const res =  await fetch (`https://mern-ecomm-62pn.onrender.com/product-list/${page}`)
     const data = await res.json()    
 
 
@@ -155,7 +155,7 @@ const loadMore = async ()=>{
 
 try {
    setLoading(true)
-  const res = await fetch (`http://localhost:8080/product-list/${page}`) 
+  const res = await fetch (`https://mern-ecomm-62pn.onrender.com/product-list/${page}`) 
   const data =   await res.json()
   setLoading(false)
   setProduct([...product,...data?.products])
@@ -192,7 +192,7 @@ useEffect(()=>{
 //// get filtered products
 const filterProducts = async ()=>{
   try {
-    const res = await fetch(`http://localhost:8080/product-filters`, {
+    const res = await fetch(`https://mern-ecomm-62pn.onrender.com/product-filters`, {
       method : "POST",
       headers:{
         "Content-Type": "application/json",
@@ -249,7 +249,7 @@ const filterProducts = async ()=>{
 
   <div className='d-flex' style={{maxWidth:"80rem",  paddingLeft:"5rem" ,  flexWrap:"wrap",}}  >
 {product.map((p)=>  <div  className='card'  style={{width:"17rem" , margin:'0.5rem'  }}  key={p._id} >  
-    <img src={`http://localhost:8080/product-photo/${p._id}`}     className='card-img-top'  style={{maxHeight:"16rem" , borderBottom:"0.2px solid grey  " }}  alt={p.name} />
+    <img src={`https://mern-ecomm-62pn.onrender.com/product-photo/${p._id}`}     className='card-img-top'  style={{maxHeight:"16rem" , borderBottom:"0.2px solid grey  " }}  alt={p.name} />
 
  
   <div className='card-body'   > 

@@ -8,8 +8,6 @@ const Admin = () => {
 
 const privatedata = useSelector(store=>store.privateData)
 
-
-
 const logindata = useSelector(store=>store.loginData)
 const dispatch = useDispatch()
 const token = logindata.token
@@ -17,7 +15,7 @@ const token = logindata.token
 useEffect(()=>{
 
 async function logindatacheck() {
-  const res = await fetch("http://localhost:8080/admin-auth", {
+  const res = await fetch("https://mern-ecomm-62pn.onrender.com/admin-auth", {
     headers:{
       "Authorization":   `Bearer ${token}`
     }

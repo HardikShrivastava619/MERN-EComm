@@ -26,7 +26,7 @@ const _dirname = path.resolve()
 
 
 const corsOptions = {
-    origin:"http://localhost:5173",
+    origin:"https://mern-ecomm-62pn.onrender.com",
     methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
     credentials:true,
 }

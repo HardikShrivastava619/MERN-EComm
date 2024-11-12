@@ -32,7 +32,7 @@ const CartPage = () => {
         
         try{
             const { nonce } = await instance.requestPaymentMethod();
-            const res = await fetch(`http://localhost:8080/braintree/payment`, {
+            const res = await fetch(`https://mern-ecomm-62pn.onrender.com/braintree/payment`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const CartPage = () => {
     // get payment gateway token
     const getToken = async () => {
         try {
-            const res = await fetch('http://localhost:8080/braintree/token');
+            const res = await fetch('https://mern-ecomm-62pn.onrender.com/braintree/token');
             const data = await res.json()
             setClientToken(data?.clientToken);
         } catch (error) {
@@ -102,7 +102,7 @@ const CartPage = () => {
                         <div className="row mb-2 card flex-row" key={p._id}>
                             <div className="col-md-4">
                                 <img 
-                                    src={`http://localhost:8080/product-photo/${p._id}`}
+                                    src={`https://mern-ecomm-62pn.onrender.com/product-photo/${p._id}`}
                                     className="card-img-top"
                                     style={{ maxHeight: "12rem", maxWidth: "10rem", borderBottom: "0.2px solid grey" }}
                                     alt={p.name}

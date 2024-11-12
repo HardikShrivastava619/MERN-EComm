@@ -17,7 +17,7 @@ const navigate = useNavigate()
       let newPassword = newPasswordRef.current.value;
       let answer = answerRef.current.value;
 
-      const response = await fetch("http://localhost:8080/forgetPassword", {
+      const response = await fetch("https://mern-ecomm-62pn.onrender.com/forgetPassword", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
