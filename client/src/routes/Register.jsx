@@ -14,10 +14,10 @@ const emailref = useRef()
 const passwordref = useRef()
 const phoneref = useRef()
 const addressref = useRef() 
- const answerref = useRef()
+const answerref = useRef()
 
 
-  const navigate =  useNavigate()
+const navigate =  useNavigate()
 
 const handleRegisterSubmit = async(event)=>{
     event.preventDefault()
@@ -40,6 +40,7 @@ try {
   })
 
   let data = await response.json();
+console.log(data)
 
   if (response.ok && data.success) {
     toast.success(data.message);

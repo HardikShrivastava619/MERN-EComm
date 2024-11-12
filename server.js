@@ -5,10 +5,23 @@ import cors from 'cors'
 import authRoutes from './routes/authRoute.js'
 import categoryRoutes from './routes/CategoryRoutes.js'
 import productRoutes from './routes/productRoutes.js'
+import connectDB from './config/db.js'
+import path from 'path'
+
 //config env
 dotenv.config()
 
+
+
+//database config
+connectDB() 
+
+
 const app = express()
+
+const _dirname = path.resolve()
+
+
 
 
 
@@ -31,11 +44,12 @@ app.use(categoryRoutes)
 app.use(productRoutes)
 
 
+app.use(express.static(path.join(_dirname , "/client/dist" )) )
+app.get("*"  ,(_,res)=>{
+    res.sendFile(path.resolve(_dirname,"client" , "dist" ,  "index.html"  ))})
+ 
 
-
-
-
-
+ 
 app.get("/",  (req,res)=>{
     res.send( "<h1> WELCOME TO E-COMMERCE WEBSITE </h1>")})
 
@@ -44,4 +58,4 @@ app.get("/",  (req,res)=>{
 
 
 app.listen(PORT,()=>{
-    console.log("server is started at "   , {PORT} )})
+    console.log("server is started at ",{PORT} )})
